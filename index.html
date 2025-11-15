@@ -296,6 +296,17 @@
             background: rgba(255, 255, 255, 0.05);
         }
         
+        .log-entry.success {
+            border-left: 3px solid #28a745;
+        }
+        
+        .log-entry.error {
+            border-left: 3px solid #dc3545;
+        }
+        
+        .log-entry.info {
+            border-left: 3px solid #17a2b8;
+        }
         
         .timestamp {
             color: #a0aec0;
@@ -467,7 +478,7 @@
             <div class="results-panel" id="resultsPanel">
                 <div class="log-entry info">
                     <div class="timestamp">Sistema iniciado</div>
-                    Cliente XML-RPC listo para conectar al robot en 127.0.0.1:8080/RPC2
+Cliente XML-RPC listo para conectar al robot en 127.0.0.1:8080/RPC2
                 </div>
             </div>
         </div>
@@ -485,7 +496,7 @@
             logEntry.className = `log-entry ${type}`;
             logEntry.innerHTML = `
                 <div class="timestamp">${timestamp}</div>
-                ${message}
+${message}
             `;
             
             panel.appendChild(logEntry);
